@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Home</h1>
+	<ul>
+		{% for s in subreddit %}
+		<li>s.title</li>
+		{% endfor %}
+	</ul>
+    
+{% endblock %}

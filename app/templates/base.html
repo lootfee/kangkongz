@@ -1,0 +1,17 @@
+<html>
+    <head>
+      <title>kangkongz - {{ title }}</title>
+    <body>
+        <div>kangkongz: <a href="/index">Home</a></div>
+		<div><a href={{ sign_in_url }}>Sign in</a>
+		<!--a href="https://www.reddit.com/api/v1/authorize?client_id=zD0r60sBmdmmKA&response_type=code&state=sttring&redirect_uri=http://localhost:5000&duration=permanent&scope=identity,submit,edit,flair,history,modconfig,modflair,modlog,modposts,modwiki,mysubreddits,privatemessages,read,report,save,subscribe,vote,wikiedit,wikiread">Sign in</a--></div>
+        <hr>
+        {% block content %}
+		{% endblock %}
+		{% if username %}
+		<div>
+			<p>Welcome {{ username }}</p>
+		</div>
+		{% endif %}
+    </body>
+</html>
