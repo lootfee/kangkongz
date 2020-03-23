@@ -1,11 +1,43 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Home</h1>
 	<ul>
-		{% for s in subreddit %}
-		<li>s.title</li>
+		{% if phgonewild %}
+		{% for submission in phgonewild %}
+		{% include '_post.html' %}
 		{% endfor %}
+		
+		{% elif phr4r %}
+		{% for submission in phr4r %}
+		{% include '_post.html' %}
+		{% endfor %}
+		
+		{% elif phgonewildcouples %}
+		{% for submission in phgonewildcouples %}
+		{% include '_post.html' %}
+		{% endfor %}
+		
+		{% elif gonewild %}
+		{% for submission in gonewild %}
+		{% include '_post.html' %}
+		{% endfor %}
+		
+		{% elif gonewildtube %}
+		{% for submission in gonewildtube %}
+		{% include '_post.html' %}
+		{% endfor %}
+		
+		{% elif asiansgonewild %}
+		{% for submission in asiansgonewild %}
+		{% include '_post.html' %}
+		{% endfor %}
+		
+		{% elif couplesgonewild %}
+		{% for submission in couplesgonewild %}
+		{% include '_post.html' %}
+		{% endfor %}
+		
+		{% endif %}
 	</ul>
     
 {% endblock %}

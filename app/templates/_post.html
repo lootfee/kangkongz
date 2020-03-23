@@ -1,0 +1,34 @@
+<div class="media col-md-12 col-lg-12 col-sm-12 col-xs-12">
+	<table class="table table-hover table-bordered " style=" border-collapse: separate !important;;border-radius: 1em;overflow: hidden; margin-bottom:5px;">
+        <tr>
+			<!--div class="media-left">
+				<td width="70px" style="text-align:center;">
+					<span style="float:left;">{{ submission.num_comments }} comments</span>
+					<span style="font-size: 11px;font-style:italic;color:blue;">{{ submission.score }} </span>
+					<span style="float:right; font-size:12px;">{{ submission.created }}</span>	
+				</td>
+			</div-->
+				<td>
+					<div class="media-left">
+						<a href="{{ submission.url }}" target="_blank"><img class="media-object" src="{{ submission.url }}" alt="post image" style="width:100px;height:100px;"></a>
+					</div>
+				</td>
+				<td>
+					<div class="media-body">
+					<a href="#" target="_blank" style="text-decoration: none;color:red;">
+						<p style="max-height: 75px;"></p>
+						{% if submission.title %}
+						<p>{{ submission.title }}</p>
+						<p><a href="{{ submission.url }}" target="_blank">{{ submission.url }}</a></p>
+						{% endif %}
+						{% if submission.body %}
+						<p>{{ submission.body}}</p>	
+						{% endif %}
+					</a>
+					
+					</div>
+					
+				</td>			
+        </tr>
+    </table>
+</div>
